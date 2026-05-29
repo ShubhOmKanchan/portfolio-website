@@ -442,7 +442,7 @@ export default function Home() {
           <div>
             <div className="mb-6 overflow-hidden rounded-full border border-cyan-400/20 bg-cyan-500/5 py-3">
 
-            <div className="flex animate-scroll whitespace-nowrap">
+            <div className="flex min-w-max animate-scroll">
 
               {[
                 "Apps Script",
@@ -470,7 +470,7 @@ export default function Home() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className={`mx-6 text-sm font-medium tracking-wide ${
+                  className={`mx-3 md:mx-6 text-xs md:text-sm font-medium tracking-wide ${
                     [
                       "text-cyan-300",
                       "text-blue-300",
@@ -486,7 +486,7 @@ export default function Home() {
             </div>
           </div>
 
-            <h1 className="mb-6 max-w-3xl bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
+            <h1 className="mb-6 max-w-3xl bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-2xl sm:text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
               Building Systems That Optimize Operations & Generate Insights
             </h1>
 
@@ -527,7 +527,7 @@ export default function Home() {
             <div className="relative w-full overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-4 md:p-8 backdrop-blur-xl">
 
               {/* Header */}
-              <div className="mb-8 flex items-center justify-between">
+              <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div>
                   <h3 className="text-2xl font-bold">
                     Workflow Intelligence
@@ -548,7 +548,7 @@ export default function Home() {
 
                 {/* CARD 1 */}
               <a href="#systems">
-                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-5 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-[#132033]">
+                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-4 md:p-5 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-[#132033]">
 
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm text-gray-400">
@@ -572,7 +572,7 @@ export default function Home() {
 
                 {/* CARD 2 */}
               <a href="#apps">
-                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-5 transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-[#132033]">
+                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-4 md:p-5 transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-[#132033]">
 
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm text-gray-400">
@@ -595,7 +595,7 @@ export default function Home() {
               </a>
                 {/* CARD 3 */}
               <a href="#services">
-                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-5 transition duration-300 hover:-translate-y-2 hover:border-violet-400/30 hover:bg-[#132033]">
+                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-4 md:p-5 transition duration-300 hover:-translate-y-2 hover:border-violet-400/30 hover:bg-[#132033]">
 
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm text-gray-400">
@@ -619,7 +619,7 @@ export default function Home() {
 
                 {/* CARD 4 */}
               <a href="#videos">
-                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-5 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-[#132033]">
+                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-4 md:p-5 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-[#132033]">
 
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm text-gray-400">
