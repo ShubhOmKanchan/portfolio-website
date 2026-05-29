@@ -37,7 +37,7 @@ export default function Home() {
         "Automation Logic",
       ],
 
-      cardImage: "/projects/instruction.png",
+      cardImage: "/projects/Instruction.png",
 
       modalImages: [
         "/projects/dashboard.png",
