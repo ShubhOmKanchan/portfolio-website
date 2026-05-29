@@ -399,7 +399,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0B0F19] text-white">
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0B0F19]/80 backdrop-blur-lg">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-6xl flex-col md:flex-row md:items-center md:justify-between px-6 py-4">
           <div>
             <div>
               <div>
@@ -410,7 +410,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex gap-4 text-sm text-gray-300 overflow-x-auto">
+          <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs text-gray-300 md:mt-0 md:text-sm">
             <a href="#systems" className="hover:text-cyan-400">
               Systems
             </a>
