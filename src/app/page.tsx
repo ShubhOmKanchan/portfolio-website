@@ -646,6 +646,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section>
+      SEO text
+      </section>
 
       {/* FEATURED SYSTEMS */}
       <section id="systems" className="px-6 py-20">
@@ -741,6 +744,10 @@ export default function Home() {
         </div>
       </section>
 
+      <section>
+      SEO text
+      </section>
+
       {/* APPS SECTION */}
       <section id="apps" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
@@ -803,6 +810,11 @@ export default function Home() {
         </div>
       </section>
 
+      <section>
+      SEO text
+      </section>
+
+
       {/* SERVICES */}
       <section id="services" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
@@ -863,6 +875,10 @@ export default function Home() {
           ))}
           </div>
         </div>
+      </section>
+
+      <section>
+      SEO text
       </section>
       <section id="videos" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
