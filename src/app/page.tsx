@@ -420,7 +420,7 @@ export default function Home() {
             <a href="#services" className="hover:text-cyan-400">
               Services
             </a>
-            <a href="#skills" className="hover:text-cyan-400">
+            <a href="#videos" className="hover:text-cyan-400">
               Showcase
             </a>
             <a href="#contact" className="hover:text-cyan-400">
