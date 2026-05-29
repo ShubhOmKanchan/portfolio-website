@@ -442,7 +442,7 @@ export default function Home() {
           <div>
             <div className="mb-6 overflow-hidden rounded-full border border-cyan-400/20 bg-cyan-500/5 py-3">
 
-            <div className="flex w-max animate-scroll whitespace-nowrap">
+            <div className="flex animate-scroll whitespace-nowrap">
 
               {[
                 "Apps Script",
@@ -486,7 +486,7 @@ export default function Home() {
             </div>
           </div>
 
-            <h1 className="mb-6 max-w-3xl bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-4xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
+            <h1 className="mb-6 max-w-3xl bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
               Building Systems That Optimize Operations & Generate Insights
             </h1>
 
@@ -524,7 +524,7 @@ export default function Home() {
             <div className="absolute -left-10 top-10 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl" />
             <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
 
-            <div className="relative overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-8 backdrop-blur-xl">
+            <div className="relative w-full overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-4 md:p-8 backdrop-blur-xl">
 
               {/* Header */}
               <div className="mb-8 flex items-center justify-between">
