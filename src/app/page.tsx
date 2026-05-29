@@ -438,11 +438,11 @@ export default function Home() {
 
         <div className="absolute bottom-0 right-0 h-[24rem] w-[24rem] rounded-full bg-violet-500/10 blur-[120px]" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-16 md:grid-cols-2 md:items-center">
-          <div>
+        <div className="relative mx-auto grid max-w-7xl gap-16 overflow-hidden md:grid-cols-2 md:items-center">
+          <div className="min-w-0 overflow-hidden">
             <div className="mb-6 overflow-hidden rounded-full border border-cyan-400/20 bg-cyan-500/5 py-3">
 
-            <div className="flex whitespace-nowrap animate-scroll">
+            <div className="flex w-max whitespace-nowrap animate-scroll">
 
               {[
                 "Apps Script",
@@ -486,11 +486,11 @@ export default function Home() {
             </div>
           </div>
 
-            <h1 className="mb-6 max-w-3xl break-words bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-xl sm:text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
+            <h1 className="mb-6 max-w-3xl break-words bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-lg sm:text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
               Building Systems That Optimize Operations & Generate Insights
             </h1>
 
-            <p className="mb-8 max-w-xl text-lg leading-relaxed text-gray-300">
+            <p className="mb-8 max-w-xl text-base md:text-lg leading-relaxed text-gray-300">
               Building automation systems, operational workflows and analytics
               solutions to reduce manual effort, improve reporting accuracy
               and provide actionable insights for better decision-making.
@@ -524,7 +524,7 @@ export default function Home() {
             <div className="absolute -left-10 top-10 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl" />
             <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
 
-            <div className="relative w-full overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-4 md:p-8 backdrop-blur-xl">
+            <div className="relative w-full min-w-0 overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-4 md:p-8 backdrop-blur-xl">
 
               {/* Header */}
               <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -1175,7 +1175,7 @@ export default function Home() {
                   Resume
                 </p>
 
-                <p className="text-2xl md:text-4xl font-black text-white">
+                <p className="text-4xl font-black text-white">
                   View Resume
                 </p>
 
