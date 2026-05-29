@@ -440,9 +440,9 @@ export default function Home() {
 
         <div className="relative mx-auto grid max-w-7xl gap-16 md:grid-cols-2 md:items-center">
           <div>
-            <div className="mb-6 overflow-x-auto rounded-full border border-cyan-400/20 bg-cyan-500/5 py-3 scrollbar-hide">
+            <div className="mb-6 overflow-hidden rounded-full border border-cyan-400/20 bg-cyan-500/5 py-3">
 
-            <div className="flex min-w-max md:animate-scroll">
+            <div className="flex min-w-max animate-scroll">
 
               {[
                 "Apps Script",
@@ -524,7 +524,7 @@ export default function Home() {
             <div className="absolute -left-10 top-10 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl" />
             <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
 
-            <div className="relative w-full overflow-visible rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-4 md:p-8 backdrop-blur-xl">
+            <div className="relative w-full overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-4 md:p-8 backdrop-blur-xl">
 
               {/* Header */}
               <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
