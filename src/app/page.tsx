@@ -1028,7 +1028,7 @@ export default function Home() {
 
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6 backdrop-blur-md">
 
-          <div className="relative max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-cyan-400/20 bg-[#07111f] p-10">
+          <p className="mt-5 max-w-3xl text-base md:text-lg leading-relaxed text-gray-400">
 
             {/* CLOSE */}
             <button
@@ -1038,7 +1038,7 @@ export default function Home() {
               ×
             </button>
 
-            <h2 className="text-6xl font-extrabold tracking-tight text-white">
+            <h2 className="pr-12 text-3xl md:text-6xl font-extrabold tracking-tight text-white">
               {selectedApp.title}
             </h2>
 
@@ -1046,7 +1046,7 @@ export default function Home() {
               {selectedApp.modalDescription}
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-6">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
               {selectedApp.images.map((image: string, index: number) => (
                 <img
                   key={index}
@@ -1087,7 +1087,7 @@ export default function Home() {
       {showContactModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-md">
 
-          <div className="relative w-[90vw] max-w-6xl rounded-[2.5rem] border border-cyan-500/20 bg-[#07111f] p-14">
+          <div className="relative w-[95vw] max-w-6xl rounded-[2.5rem] border border-cyan-500/20 bg-[#07111f] p-5 md:p-14">
 
             {/* CLOSE */}
             <button
@@ -1097,11 +1097,11 @@ export default function Home() {
               ×
             </button>
 
-            <h2 className="text-7xl font-black text-white tracking-tight">
+            <h2 className="text-4xl md:text-7xl font-black text-white tracking-tight">
             Let's Connect
-          </h2>
+            </h2>
 
-            <p className="mt-5 text-2xl text-slate-400 whitespace-nowrap">
+            <p className="mt-5 text-base md:text-2xl text-slate-400">
               Open to automation, analytics, operational systems and AI workflow collaborations.
             </p>
 
@@ -1119,7 +1119,7 @@ export default function Home() {
                   Email
                 </p>
 
-                <p className="text-3xl font-bold text-white">
+                <p className="break-all text-lg md:text-3xl font-bold text-white">
                   shubhkanchan21@gmail.com
                 </p>
               </a>
@@ -1131,7 +1131,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="rounded-3xl border border-blue-500/20 bg-blue-500/5 p-8 min-h-[180px] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
               >
-                <p className="mb-6 text-3xl font-bold text-cyan-400">
+                <p className="text-2xl md:text-4xl font-black text-white">
                   <span className="inline-block animate-bounce">
                     💼
                   </span>{" "}
@@ -1155,7 +1155,7 @@ export default function Home() {
                   Phone
                 </p>
 
-                <p className="text-4xl font-black text-white">
+                <p className="text-2xl md:text-4xl font-black text-white">
                   +91 90045 66888
                 </p>
               </a>
