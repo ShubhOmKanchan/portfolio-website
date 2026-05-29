@@ -421,7 +421,7 @@ export default function Home() {
               Services
             </a>
             <a href="#skills" className="hover:text-cyan-400">
-              Skills
+              Showcase
             </a>
             <a href="#contact" className="hover:text-cyan-400">
               Contact
@@ -491,9 +491,9 @@ export default function Home() {
             </h1>
 
             <p className="mb-8 max-w-xl text-lg leading-relaxed text-gray-300">
-              No-code systems builder focused on automation workflows,
-              operational intelligence, analytics dashboards and scalable
-              reporting systems.
+              Building automation systems, operational workflows and analytics
+              solutions to reduce manual effort, improve reporting accuracy
+              and provide actionable insights for better decision-making.
             </p>
 
             <div className="flex flex-wrap gap-4">
