@@ -972,7 +972,7 @@ export default function Home() {
 
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6 backdrop-blur-md">
 
-          <div className="relative max-h-[90vh] w-full max-w-7xl overflow-y-auto rounded-3xl border border-cyan-400/20 bg-[#07111f] p-10 shadow-2xl">
+          <div className="relative max-h-[90vh] w-full max-w-7xl overflow-y-auto rounded-3xl border border-cyan-400/20 bg-[#07111f] p-5 md:p-10 shadow-2xl">
 
             {/* CLOSE BUTTON */}
             <button
@@ -985,7 +985,7 @@ export default function Home() {
             {/* HEADER */}
             <div className="mb-8">
 
-              <div className="absolute right-24 top-6 inline-flex items-center gap-3 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-6 py-3 text-lg font-medium text-cyan-300 backdrop-blur-xl">
+              <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm md:px-6 md:py-3 md:text-lg font-medium text-cyan-300 backdrop-blur-xl">
 
                 <img
                   src={selectedProject.icon}
@@ -997,7 +997,7 @@ export default function Home() {
 
               </div>
 
-              <h2 className="pr-20 text-4xl font-black leading-tight text-white md:text-4xl">
+              <h2 className="text-3xl md:text-5xl font-black leading-tight text-white">
                 {selectedProject.title}
               </h2>
 
