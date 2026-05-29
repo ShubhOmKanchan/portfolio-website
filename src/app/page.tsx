@@ -442,7 +442,7 @@ export default function Home() {
           <div>
             <div className="mb-6 overflow-hidden rounded-full border border-cyan-400/20 bg-cyan-500/5 py-3">
 
-            <div className="flex min-w-max animate-scroll">
+            <div className="flex whitespace-nowrap animate-scroll">
 
               {[
                 "Apps Script",
@@ -486,7 +486,7 @@ export default function Home() {
             </div>
           </div>
 
-            <h1 className="mb-6 max-w-3xl bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-2xl sm:text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
+            <h1 className="mb-6 max-w-3xl break-words bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-xl sm:text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
               Building Systems That Optimize Operations & Generate Insights
             </h1>
 
@@ -544,7 +544,7 @@ export default function Home() {
               </div>
 
               {/* Operational Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
 
                 {/* CARD 1 */}
               <a href="#systems">
@@ -1087,7 +1087,7 @@ export default function Home() {
       {showContactModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-md">
 
-          <div className="relative w-[95vw] max-w-6xl rounded-[2.5rem] border border-cyan-500/20 bg-[#07111f] p-5 md:p-14">
+          <div className="relative max-h-[90vh] overflow-y-auto w-[95vw] max-w-6xl rounded-[2.5rem] border border-cyan-500/20 bg-[#07111f] p-5 md:p-14">
 
             {/* CLOSE */}
             <button
@@ -1110,7 +1110,7 @@ export default function Home() {
               {/* EMAIL */}
               <a
                 href="mailto:shubhkanchan21@gmail.com"
-                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-8 min-h-[180px] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
+                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
                 <p className="mb-6 text-3xl font-bold text-cyan-400">
                   <span className="inline-block animate-bounce">
@@ -1119,7 +1119,7 @@ export default function Home() {
                   Email
                 </p>
 
-                <p className="break-all text-lg md:text-3xl font-bold text-white">
+                <p className="break-all text-base md:text-3xl font-bold text-white">
                   shubhkanchan21@gmail.com
                 </p>
               </a>
@@ -1129,9 +1129,9 @@ export default function Home() {
                 href="https://www.linkedin.com/in/shubh-om-kanchan-baa778212/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-3xl border border-blue-500/20 bg-blue-500/5 p-8 min-h-[180px] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
+                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
-                <p className="text-2xl md:text-4xl font-black text-white">
+                <p className="text-2xl md:text-2xl md:text-4xl font-black text-white">
                   <span className="inline-block animate-bounce">
                     💼
                   </span>{" "}
@@ -1146,7 +1146,7 @@ export default function Home() {
               {/* PHONE */}
               <a
                 href="tel:+919004566888"
-                className="rounded-3xl border border-emerald-500/20 bg-emerald-500/5 p-8 min-h-[180px] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
+                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
                 <p className="mb-6 text-3xl font-bold text-cyan-400">
                   <span className="inline-block animate-ring">
@@ -1155,7 +1155,7 @@ export default function Home() {
                   Phone
                 </p>
 
-                <p className="text-2xl md:text-4xl font-black text-white">
+                <p className="text-xl md:text-4xl font-black text-white">
                   +91 90045 66888
                 </p>
               </a>
@@ -1166,7 +1166,7 @@ export default function Home() {
                   setShowContactModal(false);
                   setShowResume(true);
                 }}
-                className="rounded-3xl border border-violet-500/20 bg-violet-500/5 p-8 min-h-[180px] text-left transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
+                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
                 <p className="mb-6 text-3xl font-bold text-cyan-400">
                   <span className="inline-block animate-pulse">
@@ -1175,7 +1175,7 @@ export default function Home() {
                   Resume
                 </p>
 
-                <p className="text-4xl font-black text-white">
+                <p className="text-2xl md:text-4xl font-black text-white">
                   View Resume
                 </p>
 
