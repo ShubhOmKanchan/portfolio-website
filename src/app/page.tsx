@@ -544,7 +544,7 @@ export default function Home() {
               </div>
 
               {/* Operational Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto border-4 border-red-500">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
                 {/* CARD 1 */}
               <a href="#systems">
