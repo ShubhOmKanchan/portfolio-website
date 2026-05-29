@@ -1028,7 +1028,7 @@ export default function Home() {
 
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6 backdrop-blur-md">
 
-          <p className="mt-5 max-w-3xl text-base md:text-lg leading-relaxed text-gray-400">
+          <div className="relative max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-cyan-400/20 bg-[#07111f] p-5 md:p-10">
 
             {/* CLOSE */}
             <button
