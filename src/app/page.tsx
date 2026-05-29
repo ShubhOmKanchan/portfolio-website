@@ -442,7 +442,7 @@ export default function Home() {
           <div className="min-w-0 overflow-hidden">
             <div className="mb-6 overflow-hidden rounded-full border border-cyan-400/20 bg-cyan-500/5 py-3">
 
-            <div className="flex w-max whitespace-nowrap animate-scroll">
+            <div className="flex min-w-max whitespace-nowrap animate-scroll pl-8 md:pl-0">
 
               {[
                 "Apps Script",

@@ -44,7 +44,7 @@ body {
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-45%);
   }
 }
 .animate-scroll {
