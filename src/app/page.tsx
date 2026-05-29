@@ -410,7 +410,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden gap-8 text-sm text-gray-300 md:flex">
+          <div className="flex gap-4 text-sm text-gray-300 overflow-x-auto">
             <a href="#systems" className="hover:text-cyan-400">
               Systems
             </a>
