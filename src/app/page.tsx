@@ -402,7 +402,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div>
             <div>
-              <div className="-translate-x-25">
+              <div>
               <h1 className="bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-3xl font-black tracking-tight text-transparent">
                 Shubh Om Kanchan | Portfolio
               </h1>
@@ -486,7 +486,7 @@ export default function Home() {
             </div>
           </div>
 
-            <h1 className="mb-6 max-w-3xl bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-6xl font-black leading-[0.95] tracking-[-0.04em] text-transparent md:text-7xl">
+            <h1 className="mb-6 max-w-3xl bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-4xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
               Building Systems That Optimize Operations & Generate Insights
             </h1>
 
@@ -544,7 +544,7 @@ export default function Home() {
               </div>
 
               {/* Operational Grid */}
-              <div className="grid grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
                 {/* CARD 1 */}
               <a href="#systems">
