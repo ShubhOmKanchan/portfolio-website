@@ -309,7 +309,7 @@ export default function Home() {
     description:
       "Automated reporting engines for analytics, summaries, KPI tracking and operational monitoring.",
     tools: [
-      { name: "MS Excel | VBA", icon: "/icons/vba.png" },
+      { name: "MS Excel | VBA", icon: "/icons/vba.svg" },
       { name: "PDF Automation", icon: "/icons/pdf.png" },
       { name: "Reporting", icon: "/icons/reporting.png" },
     ],
