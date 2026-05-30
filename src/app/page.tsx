@@ -1039,8 +1039,7 @@ export default function Home() {
       </section>
       {/* CONTACT */}
       <section id="contact" className="px-6 py-24">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-12 relative z-10 text-center backdrop-blur-lg">
-
+        <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/15 via-[#07111f] to-violet-500/15 shadow-[0_0_120px_rgba(34,211,238,0.08)] p-12 relative z-10 text-center backdrop-blur-lg">
           <h2 className="text-4xl md:text-5xl font-black text-white">
             Let's Build Intelligent Systems
           </h2>
