@@ -14,6 +14,7 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
   const [selectedApp, setSelectedApp] = useState<any | null>(null);
   const [snapshotIndex, setSnapshotIndex] = useState(0);
+  const [selectedSystem, setSelectedSystem] = useState<any>(null);
   const [showContactModal, setShowContactModal] = useState(false);
   const [showResume, setShowResume] = useState(false);
   const featuredSystems = [
@@ -52,6 +53,9 @@ export default function Home() {
         "Portfolio Analytics",
         "Comparative Evaluation",
       ],
+
+      liveLink:
+        "https://docs.google.com/spreadsheets/d/1S_uM_iKKVwF-riSpYfjM8DafVCDw5ompn_YBjjd0EFY/edit?usp=sharing",
 
       longDescription:
         "Designed a scalable market risk analytics engine capable of portfolio comparison, volatility analysis, downside deviation detection and automated reporting workflows using historical market datasets.",
@@ -680,13 +684,29 @@ export default function Home() {
                     <p className="mb-5 max-w-xl text-lg leading-relaxed text-slate-300">
                       {project.description}
                     </p>
+                    <div className="mt-8 flex flex-wrap gap-4">
 
-                    <button
-                      onClick={() => setSelectedProject(project)}
-                      className="rounded-2xl border border-cyan-400/40 px-5 py-2 text-cyan-300 transition duration-300 hover:scale-105 hover:bg-cyan-400/10 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]"
-                    >
-                      View Case Study
-                    </button>
+                      <button
+                        onClick={() => setSelectedSystem(project)}
+                        className="rounded-xl border border-cyan-500 px-6 py-3 text-cyan-300 hover:bg-cyan-500/10"
+                      >
+                        View Case Study
+                      </button>
+
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative rounded-xl border border-cyan-500/40 px-6 py-3 text-cyan-300 transition-all duration-300 hover:scale-105 hover:bg-cyan-500/10"
+                      >
+                        ▶ Use System
+
+                        <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+                          ↗
+                        </span>
+                      </a>
+
+                    </div>
             
                     <div className="mt-8 flex flex-wrap gap-3">
 
