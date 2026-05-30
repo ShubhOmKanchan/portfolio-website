@@ -573,7 +573,7 @@ export default function Home() {
                       Automation Systems
                     </p>
                     {activeCard === 0 && (
-                      <div className="absolute right-4 top-4 flex items-center gap-2 text-xs font-medium text-cyan-300">
+                      <div className="flex items-center gap-2 text-xs font-medium text-cyan-300">
                         <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
                         VIEW ↗
                       </div>
@@ -599,7 +599,7 @@ export default function Home() {
                 <div
                   className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
                   ${
-                    activeCard === 0
+                    activeCard === 1
                       ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
                       : "border-white/5"
                   }`}
@@ -610,7 +610,7 @@ export default function Home() {
                       Operational Apps
                     </p>
                     {activeCard === 1 && (
-                      <div className="absolute right-4 top-4 flex items-center gap-2 text-xs font-medium text-cyan-300">
+                      <div className="flex items-center gap-2 text-xs font-medium text-cyan-300">
                         <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
                         VIEW ↗
                       </div>
@@ -635,7 +635,7 @@ export default function Home() {
                 <div
                   className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
                   ${
-                    activeCard === 0
+                    activeCard === 2
                       ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
                       : "border-white/5"
                   }`}
@@ -647,7 +647,7 @@ export default function Home() {
                     </p>
 
                     {activeCard === 2 && (
-                      <div className="absolute right-4 top-4 flex items-center gap-2 text-xs font-medium text-cyan-300">
+                      <div className="flex items-center gap-2 text-xs font-medium text-cyan-300">
                         <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
                         VIEW ↗
                       </div>
@@ -673,7 +673,7 @@ export default function Home() {
                 <div
                   className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
                   ${
-                    activeCard === 0
+                    activeCard === 3
                       ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
                       : "border-white/5"
                   }`}
@@ -685,7 +685,7 @@ export default function Home() {
                     </p>
 
                     {activeCard === 3 && (
-                      <div className="absolute right-4 top-4 flex items-center gap-2 text-xs font-medium text-cyan-300">
+                      <div className="flex items-center gap-2 text-xs font-medium text-cyan-300">
                         <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
                         VIEW ↗
                       </div>
