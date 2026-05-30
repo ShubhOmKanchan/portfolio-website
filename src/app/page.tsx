@@ -756,7 +756,10 @@ export default function Home() {
                     <div className="mt-8 flex flex-wrap gap-4">
 
                       <button
-                        onClick={() => setSelectedSystem(project)}
+                        onClick={() => {
+                          console.log("clicked");
+                          setSelectedSystem(project);
+                        }}
                         className="rounded-xl border border-cyan-500 px-6 py-3 text-cyan-300 hover:bg-cyan-500/10"
                       >
                         View Case Study
