@@ -702,10 +702,6 @@ export default function Home() {
                         >
                           ▶ Use System
 
-                          <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
-                            ↗
-                          </span>
-
                           <span className="absolute -top-2 -right-2 rounded-full bg-green-500 px-2 py-0.5 text-[10px] font-semibold text-black">
                             LIVE
                           </span>
