@@ -915,13 +915,6 @@ export default function Home() {
               className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-cyan-400/40"
             >
               <div className="service-beam" />
-              <div className="relative z-10">
-                existing icon
-                existing pills
-                existing title
-                existing text
-
-              </div>
             <div className="mb-5 flex items-start gap-4">
 
             <div className="mb-6 flex items-start gap-6">
