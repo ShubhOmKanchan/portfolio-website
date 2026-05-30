@@ -67,3 +67,38 @@ body {
     transform: translateX(250%);
   }
 }
+@keyframes contactGlowLeft {
+  0% {
+    transform: translateY(-50%) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(50px);
+  }
+
+  100% {
+    transform: translateY(-50%) translateX(0px);
+  }
+}
+
+@keyframes contactGlowRight {
+  0% {
+    transform: translateY(-50%) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(-50px);
+  }
+
+  100% {
+    transform: translateY(-50%) translateX(0px);
+  }
+}
+
+.contact-glow-left {
+  animation: contactGlowLeft 8s ease-in-out infinite;
+}
+
+.contact-glow-right {
+  animation: contactGlowRight 8s ease-in-out infinite;
+}

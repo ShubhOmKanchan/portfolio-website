@@ -1039,7 +1039,7 @@ export default function Home() {
       </section>
       {/* CONTACT */}
       <section id="contact" className="px-6 py-24">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-12 text-center backdrop-blur-lg">
+        <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-12 relative z-10 text-center backdrop-blur-lg">
 
           <h2 className="text-4xl md:text-5xl font-black text-white">
             Let's Build Intelligent Systems
@@ -1058,6 +1058,10 @@ export default function Home() {
             </button>
 
           </div>
+        </div>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="contact-glow-left absolute top-1/2 -left-32 h-[450px] w-[450px] rounded-full bg-cyan-500/20 blur-[100px]" />
+          <div className="contact-glow-right absolute top-1/2 -right-32 h-[450px] w-[450px] rounded-full bg-violet-500/20 blur-[100px]" />
         </div>
             </section>
 
