@@ -757,8 +757,7 @@ export default function Home() {
 
                       <button
                         onClick={() => {
-                          console.log("clicked");
-                          setSelectedSystem(project);
+                          setSelectedProject(project);
                         }}
                         className="rounded-xl border border-cyan-500 px-6 py-3 text-cyan-300 hover:bg-cyan-500/10"
                       >
