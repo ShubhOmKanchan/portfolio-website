@@ -731,6 +731,10 @@ export default function Home() {
                 className="relative overflow-hidden rounded-[2.5rem] border border-cyan-500/20 bg-[#0a1020]/80 px-8 py-12 backdrop-blur-xl"
               >
                 <div className="absolute inset-0">
+                  <div className="absolute -left-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[140px]" />
+                  <div className="absolute -right-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[140px]" />
+                </div>
+                <div className="absolute inset-0">
                   <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
                   <div className="absolute right-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[120px]" />
                 </div>
@@ -1037,11 +1041,9 @@ export default function Home() {
       <section id="contact" className="px-6 py-24">
         <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-12 text-center backdrop-blur-lg">
 
-          <div className="relative overflow-hidden inline-flex items-center rounded-full border border-cyan-500/30 bg-cyan-500/5 px-8 py-4 text-2xl font-semibold text-white">
+          <h2 className="text-4xl md:text-5xl font-black text-white">
             Let's Build Intelligent Systems
-
-            <span className="absolute inset-y-0 w-24 bg-white/10 blur-xl animate-[shimmer_4s_linear_infinite]" />
-          </div>
+          </h2>
 
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-300">
             Open to automation projects, workflow optimization systems,
