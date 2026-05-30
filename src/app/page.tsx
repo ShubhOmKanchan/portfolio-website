@@ -730,6 +730,10 @@ export default function Home() {
                 key={index}
                 className="relative overflow-hidden rounded-[2.5rem] border border-cyan-500/20 bg-[#0a1020]/80 px-8 py-12 backdrop-blur-xl"
               >
+                <div className="absolute inset-0">
+                  <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
+                  <div className="absolute right-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[120px]" />
+                </div>
                 <div className="absolute -right-20 top-10 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />
                 <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-blue-500/0 opacity-0 transition duration-500 group-hover:opacity-100 group-hover:from-cyan-500/5 group-hover:to-blue-500/5" />
@@ -1033,9 +1037,9 @@ export default function Home() {
       <section id="contact" className="px-6 py-24">
         <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-12 text-center backdrop-blur-lg">
 
-          <h2 className="mb-6 text-4xl font-bold">
-            Let’s Build Intelligent Systems
-          </h2>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
+            <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+          </div>
 
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-300">
             Open to automation projects, workflow optimization systems,
@@ -1045,7 +1049,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <button 
             onClick={() => setShowContactModal(true)}
-            className="rounded-2xl bg-cyan-500 px-6 py-3 font-medium text-black transition hover:scale-105">
+            className="rounded-xl bg-cyan-500 px-8 py-4 font-medium transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]">
               Contact
             </button>
 
