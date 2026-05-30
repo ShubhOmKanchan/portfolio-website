@@ -1037,9 +1037,10 @@ export default function Home() {
       <section id="contact" className="px-6 py-24">
         <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-12 text-center backdrop-blur-lg">
 
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
-            <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+          <div className="relative overflow-hidden inline-flex items-center rounded-full border border-cyan-500/30 bg-cyan-500/5 px-8 py-4 text-2xl font-semibold text-white">
             Let's Build Intelligent Systems
+
+            <span className="absolute inset-y-0 w-24 bg-white/10 blur-xl animate-[shimmer_4s_linear_infinite]" />
           </div>
 
           <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-300">
