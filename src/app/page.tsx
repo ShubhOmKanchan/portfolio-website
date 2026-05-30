@@ -344,7 +344,7 @@ export default function Home() {
     title: "AI Systems & Prompt Engineering",
     icon: Sparkles,
     description:
-      "AI-assisted workflow design, prompt architecture, image generation and structured automation planning.",
+      "Workflow design, prompt architecture, image generation and structured automation planning.",
 
     tools: [
       { name: "Architecture", icon: "/icons/ar.png" },
