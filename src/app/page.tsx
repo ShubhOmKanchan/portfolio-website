@@ -321,9 +321,10 @@ export default function Home() {
     description:
       "Interactive dashboards for analytics, performance tracking and business intelligence workflows.",
     tools: [
-      { name: "Excel", icon: "/icons/excel.png" },
+      { name: "MS Excel", icon: "/icons/excel.png" },
       { name: "Tableau", icon: "/icons/tableau.png" },
       { name: "SPSS", icon: "/icons/spss.png" },
+      { name: "Looker Studio", icon: "/icons/ls.png" },
     ],
   },
 
@@ -343,7 +344,7 @@ export default function Home() {
     title: "AI Systems & Prompt Engineering",
     icon: Sparkles,
     description:
-      "AI-assisted workflow design, prompt architecture, image generation systems and structured automation planning.",
+      "AI-assisted workflow design, prompt architecture, image generation and structured automation planning.",
 
     tools: [
       { name: "Architecture", icon: "/icons/ar.png" },
