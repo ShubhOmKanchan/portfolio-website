@@ -693,18 +693,24 @@ export default function Home() {
                         View Case Study
                       </button>
 
-                      <a
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative rounded-xl border border-cyan-500/40 px-6 py-3 text-cyan-300 transition-all duration-300 hover:scale-105 hover:bg-cyan-500/10"
-                      >
-                        ▶ Use System
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group relative rounded-xl border border-cyan-500/40 px-6 py-3 text-cyan-300 transition-all duration-300 hover:scale-105 hover:bg-cyan-500/10"
+                        >
+                          ▶ Use System
 
-                        <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
-                          ↗
-                        </span>
-                      </a>
+                          <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+                            ↗
+                          </span>
+
+                          <span className="absolute -top-2 -right-2 rounded-full bg-green-500 px-2 py-0.5 text-[10px] font-semibold text-black">
+                            LIVE
+                          </span>
+                        </a>
+                      )}
 
                     </div>
             
