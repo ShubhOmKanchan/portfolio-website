@@ -1225,7 +1225,7 @@ export default function Home() {
                 </p>
 
                 <div className="flex h-full items-center">
-                  <h3 className="text-4xl md:text-5xl font-black">
+                  <h3 className="text-2xl md:text-3xl font-black">
                     Connect Professionally
                   </h3>
                 </div>
@@ -1256,8 +1256,8 @@ export default function Home() {
                 }}
                 className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
-                <p className="mb-6 text-3xl font-bold text-cyan-400">
-                  <span className="text-left inline-block animate-pulse">
+                <p className="text-left mb-6 text-3xl font-bold text-cyan-400">
+                  <span className="inline-block animate-pulse">
                     📑
                   </span>{" "}
                   Resume
