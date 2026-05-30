@@ -10,13 +10,20 @@ import {
   X,
 } from "lucide-react";
 export default function Home() {
-
+  const [activeCard, setActiveCard] = useState(0);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
   const [selectedApp, setSelectedApp] = useState<any | null>(null);
   const [snapshotIndex, setSnapshotIndex] = useState(0);
   const [selectedSystem, setSelectedSystem] = useState<any>(null);
   const [showContactModal, setShowContactModal] = useState(false);
   const [showResume, setShowResume] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCard((prev) => (prev + 1) % 4);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
   const featuredSystems = [
 
     {
@@ -552,12 +559,25 @@ export default function Home() {
 
                 {/* CARD 1 */}
               <a href="#systems">
-                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-4 md:p-5 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-[#132033]">
+                <div
+                  className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
+                  ${
+                    activeCard === 0
+                      ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
+                      : "border-white/5"
+                  }`}
+                >
 
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm text-gray-400">
                       Automation Systems
                     </p>
+                    {activeCard === 0 && (
+                      <div className="absolute right-4 top-4 flex items-center gap-2 text-xs font-medium text-cyan-300">
+                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                        VIEW ↗
+                      </div>
+                    )}
 
                     <div className="rounded-lg bg-cyan-500/10 px-2 py-1 text-xs text-cyan-300">
                       Workflows
@@ -576,12 +596,25 @@ export default function Home() {
 
                 {/* CARD 2 */}
               <a href="#apps">
-                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-4 md:p-5 transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 hover:bg-[#132033]">
+                <div
+                  className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
+                  ${
+                    activeCard === 0
+                      ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
+                      : "border-white/5"
+                  }`}
+                >
 
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm text-gray-400">
                       Operational Apps
                     </p>
+                    {activeCard === 1 && (
+                      <div className="absolute right-4 top-4 flex items-center gap-2 text-xs font-medium text-cyan-300">
+                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                        VIEW ↗
+                      </div>
+                    )}
 
                     <div className="rounded-lg bg-blue-500/10 px-2 py-1 text-xs text-blue-300">
                       AppSheet
@@ -599,12 +632,26 @@ export default function Home() {
               </a>
                 {/* CARD 3 */}
               <a href="#services">
-                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-4 md:p-5 transition duration-300 hover:-translate-y-2 hover:border-violet-400/30 hover:bg-[#132033]">
+                <div
+                  className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
+                  ${
+                    activeCard === 0
+                      ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
+                      : "border-white/5"
+                  }`}
+                >
 
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm text-gray-400">
                       Tool Stack
                     </p>
+
+                    {activeCard === 2 && (
+                      <div className="absolute right-4 top-4 flex items-center gap-2 text-xs font-medium text-cyan-300">
+                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                        VIEW ↗
+                      </div>
+                    )}
 
                     <div className="rounded-lg bg-violet-500/10 px-2 py-1 text-xs text-violet-300">
                       Capabilites
@@ -623,12 +670,26 @@ export default function Home() {
 
                 {/* CARD 4 */}
               <a href="#videos">
-                <div className="group rounded-2xl border border-white/5 bg-[#101827] p-4 md:p-5 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-[#132033]">
+                <div
+                  className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
+                  ${
+                    activeCard === 0
+                      ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
+                      : "border-white/5"
+                  }`}
+                >
 
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm text-gray-400">
                       Showcase
                     </p>
+
+                    {activeCard === 3 && (
+                      <div className="absolute right-4 top-4 flex items-center gap-2 text-xs font-medium text-cyan-300">
+                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                        VIEW ↗
+                      </div>
+                    )}
 
                     <div className="rounded-lg bg-cyan-500/10 px-2 py-1 text-xs text-cyan-300">
                       Projects
