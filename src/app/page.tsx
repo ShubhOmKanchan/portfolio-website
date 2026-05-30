@@ -1224,9 +1224,11 @@ export default function Home() {
                   LinkedIn
                 </p>
 
-                <p className="text-4xl font-black text-white">
-                  Connect Professionally
-                </p>
+                <div className="flex h-full items-center">
+                  <h3 className="text-4xl md:text-5xl font-black">
+                    Connect Professionally
+                  </h3>
+                </div>
               </a>
 
               {/* PHONE */}
@@ -1255,13 +1257,13 @@ export default function Home() {
                 className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
                 <p className="mb-6 text-3xl font-bold text-cyan-400">
-                  <span className="inline-block animate-pulse">
+                  <span className="text-left inline-block animate-pulse">
                     📑
                   </span>{" "}
                   Resume
                 </p>
 
-                <p className="text-4xl font-black text-white">
+                <p className="text-left text-4xl font-black text-white">
                   View Resume
                 </p>
 
