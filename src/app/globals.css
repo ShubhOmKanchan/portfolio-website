@@ -102,3 +102,33 @@ body {
 .contact-glow-right {
   animation: contactGlowRight 8s ease-in-out infinite;
 }
+.service-beam {
+  position: absolute;
+  top: -30%;
+  left: -40%;
+  width: 120px;
+  height: 220%;
+  
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(34,211,238,0.12),
+    transparent
+  );
+
+  filter: blur(30px);
+
+  animation: serviceBeamMove 8s linear infinite;
+
+  pointer-events: none;
+}
+
+@keyframes serviceBeamMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(700px);
+  }
+}
