@@ -574,7 +574,7 @@ export default function Home() {
                     </p>
                     {activeCard === 0 && (
                       <div className="flex items-center gap-2 text-xs font-medium text-cyan-300">
-                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+            
                         VIEW ↗
                       </div>
                     )}
@@ -611,7 +611,7 @@ export default function Home() {
                     </p>
                     {activeCard === 1 && (
                       <div className="flex items-center gap-2 text-xs font-medium text-cyan-300">
-                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                        
                         VIEW ↗
                       </div>
                     )}
@@ -648,7 +648,7 @@ export default function Home() {
 
                     {activeCard === 2 && (
                       <div className="flex items-center gap-2 text-xs font-medium text-cyan-300">
-                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                        
                         VIEW ↗
                       </div>
                     )}
@@ -686,7 +686,7 @@ export default function Home() {
 
                     {activeCard === 3 && (
                       <div className="flex items-center gap-2 text-xs font-medium text-cyan-300">
-                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                        
                         VIEW ↗
                       </div>
                     )}
