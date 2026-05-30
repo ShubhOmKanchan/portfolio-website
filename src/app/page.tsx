@@ -573,7 +573,7 @@ export default function Home() {
                       Automation Systems
                     </p>
                     {activeCard === 0 && (
-                      <div className="absolute -top-2 right-4 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[10px] font-semibold text-cyan-300 animate-pulse">
+                      <div className="absolute -top-2 right-2 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[8px] font-semibold text-cyan-300 animate-pulse">
             
                         VIEW ↗
                       </div>
@@ -610,7 +610,7 @@ export default function Home() {
                       Operational Apps
                     </p>
                     {activeCard === 1 && (
-                      <div className="absolute -top-2 right-4 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[10px] font-semibold text-cyan-300 animate-pulse">
+                      <div className="absolute -top-2 right-2 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[8px] font-semibold text-cyan-300 animate-pulse">
                         
                         VIEW ↗
                       </div>
@@ -647,7 +647,7 @@ export default function Home() {
                     </p>
 
                     {activeCard === 2 && (
-                      <div className="absolute -top-2 right-4 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[10px] font-semibold text-cyan-300 animate-pulse">
+                      <div className="absolute -top-2 right-2 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[8px] font-semibold text-cyan-300 animate-pulse">
                         
                         VIEW ↗
                       </div>
@@ -685,7 +685,7 @@ export default function Home() {
                     </p>
 
                     {activeCard === 3 && (
-                      <div className="absolute -top-2 right-4 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[10px] font-semibold text-cyan-300 animate-pulse">
+                      <div className="absolute -top-2 right-2 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[8px] font-semibold text-cyan-300 animate-pulse">
           
                         VIEW ↗
                       </div>
