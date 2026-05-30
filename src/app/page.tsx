@@ -730,7 +730,7 @@ export default function Home() {
                 key={index}
                 className="relative overflow-hidden rounded-[2.5rem] border border-cyan-500/20 bg-[#0a1020]/80 px-8 py-12 backdrop-blur-xl"
               >
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 pointer-events-none">
                   <div className="absolute -left-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[140px]" />
                   <div className="absolute -right-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[140px]" />
                 </div>
@@ -738,10 +738,10 @@ export default function Home() {
                   <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
                   <div className="absolute right-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[120px]" />
                 </div>
-                <div className="absolute -right-20 top-10 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />
-                <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-blue-500/0 opacity-0 transition duration-500 group-hover:opacity-100 group-hover:from-cyan-500/5 group-hover:to-blue-500/5" />
-                <div className="relative grid gap-6 lg:grid-cols-[0.9fr_1.3fr] items-center">
+                <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />
+                <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-blue-500/0 opacity-0 transition duration-500 group-hover:opacity-100 group-hover:from-cyan-500/5 group-hover:to-blue-500/5" />
+                <div className="relative z-10 grid gap-6 lg:grid-cols-[0.9fr_1.3fr] items-center">
 
                   {/* LEFT CONTENT */}
                   <div>
