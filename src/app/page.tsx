@@ -444,11 +444,11 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative overflow-hidden px-6 py-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10 blur-3xl" />
 
-        <div className="absolute left-1/3 top-1/4 h-[28rem] w-[28rem] rounded-full bg-cyan-500/10 blur-[120px]" />
+        <div className="pointer-events-none absolute left-1/3 top-1/4 h-[28rem] w-[28rem] rounded-full bg-cyan-500/10 blur-[120px]" />
 
-        <div className="absolute bottom-0 right-0 h-[24rem] w-[24rem] rounded-full bg-violet-500/10 blur-[120px]" />
+        <div className="pointer-events-none absolute bottom-0 right-0 h-[24rem] w-[24rem] rounded-full bg-violet-500/10 blur-[120px]" />
 
         <div className="relative mx-auto grid max-w-7xl gap-16 overflow-hidden md:grid-cols-2 md:items-center">
           <div className="min-w-0 overflow-hidden">
@@ -509,16 +509,14 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="rounded-2xl bg-cyan-500 px-6 py-3 font-medium text-black transition hover:scale-105">
-                <a
-                  href="https://www.linkedin.com/in/shubh-om-kanchan-baa778212/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="..."
-                >
-                  LinkedIn
-                </a>
-              </button>
+              <a
+                href="https://www.linkedin.com/in/shubh-om-kanchan-baa778212/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl bg-cyan-500 px-6 py-3 font-medium text-black transition hover:scale-105 inline-flex items-center"
+              >
+                LinkedIn
+              </a>
 
               <button
                 onClick={() => setShowResume(true)}
@@ -735,7 +733,7 @@ export default function Home() {
                   <div className="absolute -left-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[140px]" />
                   <div className="absolute -right-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[140px]" />
                 </div>
-                <div className="absolute inset-0">
+                <div className="pointer-events-none absolute inset-0">
                   <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
                   <div className="absolute right-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[120px]" />
                 </div>
