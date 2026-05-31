@@ -1060,10 +1060,6 @@ export default function Home() {
 
           </div>
         </div>
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="contact-glow-left absolute top-1/2 -left-32 h-[450px] w-[450px] rounded-full bg-cyan-500/20 blur-[100px]" />
-          <div className="contact-glow-right absolute top-1/2 -right-32 h-[450px] w-[450px] rounded-full bg-violet-500/20 blur-[100px]" />
-        </div>
             </section>
 
       {/* MODAL */}
