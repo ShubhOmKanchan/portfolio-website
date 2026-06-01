@@ -145,7 +145,7 @@ export default function Home() {
       ],
 
       longDescription:
-        "Designed a CAT mock test analytics engine capable of automated score analysis, sectional benchmarking and diagnostic performance reporting workflows. [Built in collaboration with the Teck Tank committee at Center for Academic and Professional Support, CAPS]",
+        "Designed a CAT mock test analytics engine capable of automated score analysis, sectional benchmarking and diagnostic performance reporting workflows.",
 
     },
 
@@ -212,7 +212,7 @@ export default function Home() {
       ],
 
       longDescription:
-        "Designed a volunteer and venue operations management system focused on attendance workflows, event coordination and operational tracking. [Built in collaboration with the Teck Tank committee at Center for Academic and Professional Support, CAPS]",
+        "Designed a volunteer and venue operations management system focused on attendance workflows, event coordination and operational tracking.",
     },
 
     {
