@@ -113,7 +113,7 @@ export default function Home() {
       title: "Mock CAT Analytics Engine",
 
       description:
-        "Automated CAT performance evaluation and comparative reporting engine.",
+        "Automated CAT performance evaluation and comparative reporting engine. [Built in collaboration with the Teck Tank committee at Center for Academic and Professional Support, CAPS]",
 
       metrics: [
         "Section-wise Analysis",
@@ -145,7 +145,7 @@ export default function Home() {
       ],
 
       longDescription:
-        "Designed a CAT mock test analytics engine capable of automated score analysis, sectional benchmarking and diagnostic performance reporting workflows.",
+        "Designed a CAT mock test analytics engine capable of automated score analysis, sectional benchmarking and diagnostic performance reporting workflows. [Built in collaboration with the Teck Tank committee at Center for Academic and Professional Support, CAPS]",
 
     },
 
@@ -192,7 +192,7 @@ export default function Home() {
 
       cardImage: "/projects/confluence-app.png",
 
-      modalDescription:"Enterprise-style volunteer coordination and event operations platform designed for attendance tracking, venue workflow management, operational reporting and real-time event execution support systems.",
+      modalDescription:"Enterprise-style volunteer coordination and event operations platform designed for attendance tracking, venue workflow management, operational reporting and real-time event execution support systems. [Built in collaboration with the Teck Tank committee at Center for Academic and Professional Support, CAPS]",
 
 
       images: [
