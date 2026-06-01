@@ -73,7 +73,7 @@ export default function Home() {
       title: "MBTI Evaluation Engine",
 
       description:
-        "Automated personality evaluation and personalized report generation system.",
+        "Automated personality evaluation and personalized report generation system. [Built in collaboration with the Teck Tank committee at Center for Academic and Professional Support, CAPS]",
 
       metrics: [
         "16 Personality Profiles",
@@ -212,7 +212,7 @@ export default function Home() {
       ],
 
       longDescription:
-        "Designed a volunteer and venue operations management system focused on attendance workflows, event coordination and operational tracking.",
+        "Designed a volunteer and venue operations management system focused on attendance workflows, event coordination and operational tracking. [Built in collaboration with the Teck Tank committee at Center for Academic and Professional Support, CAPS]",
     },
 
     {
