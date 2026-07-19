@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFF0;
+  --foreground: #228B22;
 }
 
 @theme inline {
@@ -11,6 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
 @keyframes ring {
   0% { transform: rotate(0deg); }
   5% { transform: rotate(15deg); }
@@ -26,10 +27,11 @@
   animation: ring 2.5s infinite;
   transform-origin: top center;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFFF0;
+    --foreground: #228B22;
   }
 }
 
@@ -38,6 +40,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -47,17 +50,21 @@ body {
     transform: translateX(-45%);
   }
 }
+
 .animate-scroll {
   animation: scroll 15s linear infinite;
 }
+
 html,
 body {
   overflow-x: hidden;
 }
+
 body {
   background: var(--background);
   color: var(--foreground);
 }
+
 @keyframes shimmer {
   0% {
     transform: translateX(-150%);
@@ -67,6 +74,7 @@ body {
     transform: translateX(250%);
   }
 }
+
 @keyframes contactGlowLeft {
   0% {
     transform: translateY(-50%) translateX(0px);
@@ -102,17 +110,18 @@ body {
 .contact-glow-right {
   animation: contactGlowRight 8s ease-in-out infinite;
 }
+
 .service-beam {
   position: absolute;
   top: -30%;
   left: -40%;
   width: 120px;
   height: 220%;
-  
+
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(34,211,238,0.12),
+    rgba(157, 174, 17, 0.18),
     transparent
   );
 
@@ -131,4 +140,70 @@ body {
   100% {
     transform: translateX(700px);
   }
+}
+@keyframes gearSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gearMedium {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes gearReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-gearSlow,
+.animate-gearMedium,
+.animate-gearReverse {
+  transform-origin: center;
+  transform-box: fill-box;
+  will-change: transform;
+}
+
+.animate-gearSlow {
+  animation: gearSlow 36s linear infinite;
+}
+
+.animate-gearMedium {
+  animation: gearMedium 26s linear infinite;
+}
+
+.animate-gearReverse {
+  animation: gearReverse 48s linear infinite;
+}
+@keyframes cpuGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.75;
+  }
+}
+
+.animate-cpuGlow {
+  animation: cpuGlow 6.5s ease-in-out infinite;
 }

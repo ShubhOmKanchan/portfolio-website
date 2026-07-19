@@ -8,9 +8,18 @@ import {
   BookOpen,
   Sparkles,
   X,
+  Mail,
+  MessageSquare,
+  CalendarDays,
+  Video,
+  FolderOpen,
+  Settings,
+  Cpu,
+  Network,
 } from "lucide-react";
 export default function Home() {
   const [activeCard, setActiveCard] = useState(0);
+  const [selectedWorkspaceTool, setSelectedWorkspaceTool] = useState<any>(null);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
   const [selectedApp, setSelectedApp] = useState<any | null>(null);
   const [snapshotIndex, setSnapshotIndex] = useState(0);
@@ -275,6 +284,79 @@ export default function Home() {
         "Developed a gamified FRM preparation system focused on reinforcement learning, revision tracking and performance-based study workflows.",
     },
   ];
+  const workspaceTools = [
+    {
+      title: "Gmail",
+      icon: Mail,
+      short: "Professional communication",
+      description:
+        "Designed professional email signatures, implemented inbox labels and categorization strategies, and established structured communication workflows for committees and operational teams.",
+    },
+
+    {
+      title: "Google Chat",
+      icon: MessageSquare,
+      short: "Team collaboration",
+      description:
+        "Built organized communication spaces for committees and project teams, enabling structured discussions, announcements and day-to-day operational collaboration.",
+    },
+
+    {
+      title: "Google Calendar",
+      icon: CalendarDays,
+      short: "Scheduling & planning",
+      description:
+        "Managed formal meeting schedules, project discussions, deadlines and collaborative planning through shared calendars and event management.",
+    },
+
+    {
+      title: "Google Meet",
+      icon: Video,
+      short: "Virtual collaboration",
+      description:
+        "Conducted professional meetings, project reviews and collaborative sessions while integrating AI-assisted meeting documentation.",
+    },
+
+    {
+      title: "Google Drive & Docs",
+      icon: FolderOpen,
+      short: "Knowledge management",
+      description:
+        "Maintained centralized documentation, shared resources, SOPs and collaborative documents that supported operational consistency.",
+    },
+
+    {
+      title: "Google Sheets",
+      icon: FileSpreadsheet,
+      short: "Operational data",
+      description:
+        "Built structured operational trackers, dashboards and datasets that served as the foundation for workflow automation and reporting.",
+    },
+
+    {
+      title: "Google Apps Script",
+      icon: Workflow,
+      short: "Workflow automation",
+      description:
+        "Automated Google Sheets and Google Docs processes, reduced manual work, standardized workflows and improved operational efficiency through scripting.",
+    },
+
+    {
+      title: "Looker Studio",
+      icon: BarChart3,
+      short: "Executive reporting",
+      description:
+        "Developed interactive dashboards and business reports that transformed operational datasets into actionable management insights.",
+    },
+
+    {
+      title: "Gemini AI",
+      icon: Sparkles,
+      short: "AI productivity",
+      description:
+        "Created dedicated Gemini Gems for workflow assistance, content refinement, knowledge organization and operational decision support across business processes.",
+    },
+  ];
   
   const services = [
   {
@@ -406,36 +488,64 @@ export default function Home() {
     "Data Visualization",
     "Reporting Systems",
   ];
+  const websiteImages = [
+    "/images/1.png",
+    "/images/2.png",
+    "/images/3.png",
+    "/images/4.png",
+  ];
+
+  const [currentWebsiteImage, setCurrentWebsiteImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWebsiteImage(
+        (prev) => (prev + 1) % websiteImages.length
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % websiteImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-[#0B0F19] text-white">
+    <div className="min-h-screen bg-[#FFFFF0] text-[#228B22]">
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0B0F19]/80 backdrop-blur-lg">
-        <div className="mx-auto flex max-w-6xl flex-col md:flex-row md:items-center md:justify-between px-6 py-4">
+      <nav className="sticky top-0 z-50 border-b border-[#9dae11]/30 bg-[#FFFFF0]/90 backdrop-blur-lg">
+        <div className="mx-auto flex max-w-7xl flex-col md:flex-row md:items-center md:justify-between px-4 lg:px-2 py-3 lg:py-4">
           <div>
             <div>
               <div>
-              <h1 className="bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-3xl font-black tracking-tight text-transparent">
+              <h1 className="bg-gradient-to-r from-[#228B22] via-[#9dae11] to-[#228B22] bg-clip-text text-3xl font-black tracking-tight text-transparent">
                 Shubh Om Kanchan | Portfolio
               </h1>
               </div>
             </div>
           </div>
 
-          <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs text-gray-300 md:mt-0 md:text-sm">
-            <a href="#systems" className="hover:text-cyan-400">
+          <div className="mt-4 flex flex-wrap justify-center gap-2 lg:gap-16 text-xs text-[#228B22] md:mt-0 md:text-sm">
+            <a href="#systems" className="hover:text-[#9dae11]">
               Systems
             </a>
-            <a href="#apps" className="hover:text-cyan-400">
+            <a href="#apps" className="hover:text-[#9dae11]">
               Apps
             </a>
-            <a href="#services" className="hover:text-cyan-400">
+            <a href="#services" className="hover:text-[#9dae11]">
               Services
             </a>
-            <a href="#videos" className="hover:text-cyan-400">
+            <a href="#videos" className="hover:text-[#9dae11]">
               Showcase
             </a>
-            <a href="#contact" className="hover:text-cyan-400">
+            <a href="#contact" className="hover:text-[#9dae11]">
               Contact
             </a>
           </div>
@@ -443,16 +553,16 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section className="relative overflow-hidden px-6 py-24">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-purple-500/10 blur-3xl" />
+      <section className="relative overflow-hidden px-6 py-5 lg:py-20">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#228B22]/10 via-[#9dae11]/5 to-[#228B22]/10 blur-3xl" />
 
-        <div className="pointer-events-none absolute left-1/3 top-1/4 h-[28rem] w-[28rem] rounded-full bg-cyan-500/10 blur-[120px]" />
+        <div className="pointer-events-none absolute left-1/3 top-1/4 h-[28rem] w-[28rem] rounded-full bg-[#228B22]/10 blur-[120px]" />
 
-        <div className="pointer-events-none absolute bottom-0 right-0 h-[24rem] w-[24rem] rounded-full bg-violet-500/10 blur-[120px]" />
+        <div className="pointer-events-none absolute bottom-0 right-0 h-[24rem] w-[24rem] rounded-full bg-[#9dae11]/10 blur-[120px]" />
 
         <div className="relative mx-auto grid max-w-7xl gap-16 overflow-hidden md:grid-cols-2 md:items-center">
           <div className="min-w-0 overflow-hidden">
-            <div className="mb-6 overflow-hidden rounded-full border border-cyan-400/20 bg-cyan-500/5 py-3">
+            <div className="mb-6 overflow-hidden rounded-full border border-[#9dae11]/20 bg-[#228B22]/5 py-3">
 
             <div className="flex min-w-max whitespace-nowrap animate-scroll pl-8 md:pl-0">
 
@@ -484,10 +594,10 @@ export default function Home() {
                   key={index}
                   className={`mx-3 md:mx-6 text-xs md:text-sm font-medium tracking-wide ${
                     [
-                      "text-cyan-300",
-                      "text-blue-300",
-                      "text-violet-300",
-                      "text-slate-200",
+                      "text-[#228B22]",
+                      "text-[#9dae11]",
+                      "text-[#228B22]",
+                      "text-[#228B22]/80",
                     ][index % 4]
                   }`}
                 >
@@ -498,29 +608,29 @@ export default function Home() {
             </div>
           </div>
 
-            <h1 className="mb-6 max-w-3xl break-words bg-gradient-to-br from-white via-slate-100 to-cyan-200 bg-clip-text text-lg sm:text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
+            <h1 className="mb-6 max-w-3xl break-words bg-gradient-to-br from-[#228B22] via-[#9dae11] to-[#228B22] bg-clip-text text-lg sm:text-3xl md:text-7xl font-black leading-[0.95] tracking-[-0.04em] text-transparent">
               Building Systems That Optimize Operations & Generate Insights
             </h1>
 
-            <p className="mb-8 max-w-xl text-base md:text-lg leading-relaxed text-gray-300">
+            <p className="mb-8 max-w-xl text-base md:text-lg leading-relaxed text-[#228B22]/80">
               Building automation systems, operational workflows and analytics
               solutions to reduce manual effort, improve reporting accuracy
               and provide actionable insights for better decision-making.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4" style={{paddingLeft:"10px", paddingBottom:"10px"}}>
               <a
                 href="https://www.linkedin.com/in/shubh-om-kanchan-baa778212/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-2xl bg-cyan-500 px-6 py-3 font-medium text-black transition hover:scale-105 inline-flex items-center"
+                className="rounded-2xl bg-[#228B22] px-6 py-3 font-medium text-[#FFFFF0] transition hover:scale-105 inline-flex items-center"
               >
                 LinkedIn
               </a>
 
               <button
                 onClick={() => setShowResume(true)}
-                className="rounded-2xl border border-white/20 px-8 py-4 text-lg font-medium transition hover:border-cyan-400/40"
+                className="rounded-2xl border border-[#9dae11]/30 border-white/20 px-8 py-4 text-lg font-medium transition hover:border-[#9dae11]/60"
               >
                 Resume
               </button>
@@ -531,10 +641,10 @@ export default function Home() {
           <div className="relative grid gap-4">
 
             {/* Background Glow */}
-            <div className="absolute -left-10 top-10 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl" />
-            <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
+            <div className="absolute -left-10 top-10 h-72 w-72 rounded-full bg-[#228B22]/20 blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#9dae11]/20 blur-3xl" />
 
-            <div className="relative w-full min-w-0 overflow-hidden rounded-[2rem] border border-cyan-500/20 bg-cyan-500/5 p-4 md:p-8 backdrop-blur-xl">
+            <div className="relative w-full min-w-0 overflow-hidden rounded-[2rem] border border-[#9dae11]/20 bg-[#228B22]/5 p-4 md:p-8 backdrop-blur-xl">
 
               {/* Header */}
               <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -543,12 +653,12 @@ export default function Home() {
                     Workflow Intelligence
                   </h3>
 
-                  <p className="mt-2 text-sm text-gray-400">
+                  <p className="mt-2 text-sm text-[#228B22]/70">
                     Operational systems & automation analytics
                   </p>
                 </div>
 
-                <div className="mx-auto md:mx-0 w-fit md:w-auto rounded-full border border-cyan-400/30 px-4 py-2 text-sm text-cyan-300">
+                <div className="mx-auto md:mx-0 w-fit md:w-auto rounded-full border border-[#9dae11]/30 px-4 py-2 text-sm text-[#228B22]">
                   Automation • Analytics • AI
                 </div>
               </div>
@@ -559,26 +669,26 @@ export default function Home() {
                 {/* CARD 1 */}
               <a href="#systems">
                 <div
-                  className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
+                  className={`group relative rounded-2xl border bg-[#228B22] p-4 md:p-5 transition-all duration-700
                   ${
                     activeCard === 0
-                      ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
-                      : "border-white/5"
+                      ? "scale-105 border-[#9dae11]/40 shadow-[0_0_30px_rgba(157,174,17,0.18)]"
+                      : "border-[#9dae11]/15"
                   }`}
                 >
 
                   <div className="mb-4 flex items-center justify-between">
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-white">
                       Automation Systems
                     </p>
                     {activeCard === 0 && (
-                      <div className="absolute -top-2 right-1 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[8px] font-semibold text-cyan-300 animate-pulse">
+                      <div className="absolute -top-2 right-1 rounded-full border border-[#9dae11]/30 bg-[#fffff0] px-2 py-1 text-[8px] font-semibold text-[#228B22] animate-pulse">
             
                         VIEW ↗
                       </div>
                     )}
 
-                    <div className="rounded-lg bg-cyan-500/10 px-2 py-1 text-xs text-cyan-300">
+                    <div className="rounded-lg bg-[#fffff0]/45 px-2 py-1 text-xs text-[#228B22]">
                       Workflows
                     </div>
                   </div>
@@ -587,7 +697,7 @@ export default function Home() {
                     12+
                   </h3>
 
-                  <p className="mt-3 text-xs leading-relaxed text-gray-500">
+                  <p className="mt-3 text-xs leading-relaxed text-white">
                     Operational automation and reporting infrastructures
                   </p>
                 </div>
@@ -596,26 +706,26 @@ export default function Home() {
                 {/* CARD 2 */}
               <a href="#apps">
                 <div
-                  className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
+                  className={`group relative rounded-2xl border bg-[#228B22] p-4 md:p-5 transition-all duration-700
                   ${
                     activeCard === 1
-                      ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
-                      : "border-white/5"
+                      ? "scale-105 border-[#9dae11]/40 shadow-[0_0_30px_rgba(157,174,17,0.18)]"
+                      : "border-[#9dae11]/15"
                   }`}
                 >
 
                   <div className="mb-4 flex items-center justify-between">
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-white">
                       Operational Apps
                     </p>
                     {activeCard === 1 && (
-                      <div className="absolute -top-2 right-1 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[8px] font-semibold text-cyan-300 animate-pulse">
+                      <div className="absolute -top-2 right-1 rounded-full border border-[#9dae11]/30 bg-[#fffff0] px-2 py-1 text-[8px] font-semibold text-[#228B22] animate-pulse">
                         
                         VIEW ↗
                       </div>
                     )}
 
-                    <div className="rounded-lg bg-blue-500/10 px-2 py-1 text-xs text-blue-300">
+                    <div className="rounded-lg bg-[#fffff0]/45 px-2 py-1 text-xs text-[#228B22]">
                       AppSheet
                     </div>
                   </div>
@@ -624,7 +734,7 @@ export default function Home() {
                     4
                   </h3>
 
-                  <p className="mt-3 text-xs leading-relaxed text-gray-500">
+                  <p className="mt-3 text-xs leading-relaxed text-white">
                     Workflow systems for operations, tracking and management
                   </p>
                 </div>
@@ -632,27 +742,27 @@ export default function Home() {
                 {/* CARD 3 */}
               <a href="#services">
                 <div
-                  className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
+                  className={`group relative rounded-2xl border bg-[#228B22] p-4 md:p-5 transition-all duration-700
                   ${
                     activeCard === 2
-                      ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
-                      : "border-white/5"
+                      ? "scale-105 border-[#9dae11]/40 shadow-[0_0_30px_rgba(157,174,17,0.18)]"
+                      : "border-[#9dae11]/15"
                   }`}
                 >
 
                   <div className="mb-4 flex items-center justify-between">
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-white">
                       Tool Stack
                     </p>
 
                     {activeCard === 2 && (
-                      <div className="absolute -top-2 right-1 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[8px] font-semibold text-cyan-300 animate-pulse">
+                      <div className="absolute -top-2 right-1 rounded-full border border-[#9dae11]/30 bg-[#fffff0] px-2 py-1 text-[8px] font-semibold text-[#228B22] animate-pulse">
                         
                         VIEW ↗
                       </div>
                     )}
 
-                    <div className="rounded-lg bg-violet-500/10 px-2 py-1 text-xs text-violet-300">
+                    <div className="rounded-lg bg-[#fffff0]/45 px-2 py-1 text-xs text-[#228B22]">
                       Capabilites
                     </div>
                   </div>
@@ -661,7 +771,7 @@ export default function Home() {
                     Core Skills
                   </h3>
 
-                  <p className="mt-3 text-xs leading-relaxed text-gray-500">
+                  <p className="mt-3 text-xs leading-relaxed text-white">
                     What tools are used to build pipelines and set up organisational ecosystems
                   </p>
                 </div>
@@ -670,27 +780,27 @@ export default function Home() {
                 {/* CARD 4 */}
               <a href="#videos">
                 <div
-                  className={`group relative rounded-2xl border bg-[#101827] p-4 md:p-5 transition-all duration-700
+                  className={`group relative rounded-2xl border bg-[#228B22] p-4 md:p-5 transition-all duration-700
                   ${
                     activeCard === 3
-                      ? "scale-105 border-cyan-400/40 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
-                      : "border-white/5"
+                      ? "scale-105 border-[#9dae11]/40 shadow-[0_0_30px_rgba(157,174,17,0.18)]"
+                      : "border-[#9dae11]/15"
                   }`}
                 >
 
                   <div className="mb-4 flex items-center justify-between">
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-white">
                       Showcase
                     </p>
 
                     {activeCard === 3 && (
-                      <div className="absolute -top-2 right-1 rounded-full border border-cyan-400/30 bg-[#0B0F19] px-2 py-1 text-[8px] font-semibold text-cyan-300 animate-pulse">
+                      <div className="absolute -top-2 right-1 rounded-full border border-[#9dae11]/30 bg-[#fffff0] px-2 py-1 text-[8px] font-semibold text-[#228B22] animate-pulse">
           
                         VIEW ↗
                       </div>
                     )}
 
-                    <div className="rounded-lg bg-cyan-500/10 px-2 py-1 text-xs text-cyan-300">
+                    <div className="rounded-lg bg-[#fffff0]/45 px-2 py-1 text-xs text-[#228B22]">
                       Projects
                     </div>
                   </div>
@@ -699,7 +809,7 @@ export default function Home() {
                     Display
                   </h3>
 
-                  <p className="mt-4 text-xs leading-relaxed text-gray-500">
+                  <p className="mt-4 text-xs leading-relaxed text-white">
                     Automation, workflow and analytics infrastructure stack
                   </p>
                 </div>
@@ -715,7 +825,7 @@ export default function Home() {
       <section id="systems" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12">
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-400">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#9dae11]">
               Featured Systems
             </p>
             <h2 className="text-4xl font-bold">
@@ -727,29 +837,29 @@ export default function Home() {
             {featuredSystems.map((project, index) => (
               <div
                 key={index}
-                className="relative overflow-hidden rounded-[2.5rem] border border-cyan-500/20 bg-[#0a1020]/80 px-8 py-12 backdrop-blur-xl"
+                className="relative overflow-hidden rounded-[2.5rem] border border-[#9dae11]/25 bg-[#228B22]/90 px-8 py-12 backdrop-blur-xl"
               >
                 <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute -left-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[140px]" />
-                  <div className="absolute -right-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[140px]" />
+                  <div className="absolute -left-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-[#9dae11]/10 blur-[140px]" />
+                  <div className="absolute -right-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-[#228B22]/10 blur-[140px]" />
                 </div>
                 <div className="pointer-events-none absolute inset-0">
-                  <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
-                  <div className="absolute right-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-violet-500/10 blur-[120px]" />
+                  <div className="absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-[#9dae11]/10 blur-[120px]" />
+                  <div className="absolute right-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-[#228B22]/10 blur-[120px]" />
                 </div>
-                <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-cyan-500/10 blur-[120px]" />
-                <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-blue-500/0 opacity-0 transition duration-500 group-hover:opacity-100 group-hover:from-cyan-500/5 group-hover:to-blue-500/5" />
+                <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-[#9dae11]/10 blur-[120px]" />
+                <div className="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-[#9dae11]/10 blur-[120px]" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#228B22]/0 via-[#228B22]/0 to-[#9dae11]/0 opacity-0 transition duration-500 group-hover:opacity-100 group-hover:from-[#228B22]/5 group-hover:to-[#9dae11]/5" />
                 <div className="relative z-10 grid gap-6 lg:grid-cols-[0.9fr_1.3fr] items-center">
 
                   {/* LEFT CONTENT */}
                   <div>
 
-                    <h3 className="mb-4 text-3xl font-bold">
+                    <h3 className="mb-4 text-3xl font-bold text-[#FFFFF0]">
                       {project.title}
                     </h3>
 
-                    <p className="mb-5 max-w-xl text-lg leading-relaxed text-slate-300">
+                    <p className="mb-5 max-w-xl text-lg leading-relaxed text-[#FFFFF0]">
                       {project.description}
                     </p>
                     <div className="mt-8 flex flex-wrap gap-4">
@@ -758,7 +868,7 @@ export default function Home() {
                         onClick={() => {
                           setSelectedProject(project);
                         }}
-                        className="rounded-xl border border-cyan-500 px-6 py-3 text-cyan-300 hover:bg-cyan-500/10"
+                        className="rounded-xl border border-[#9dae11] px-6 py-3 text-[#FFFFF0] hover:bg-[#9dae11]/10"
                       >
                         View Case Study
                       </button>
@@ -768,11 +878,11 @@ export default function Home() {
                           href={project.liveLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group relative rounded-xl border border-cyan-500/40 px-6 py-3 text-cyan-300 transition-all duration-300 hover:scale-105 hover:bg-cyan-500/10"
+                          className="group relative rounded-xl border border-[#9dae11]/40 px-6 py-3 text-[#FFFFF0] transition-all duration-300 hover:scale-105 hover:bg-[#9dae11]/20"
                         >
                           ▶ Use System
 
-                          <span className="absolute -top-2 -right-2 rounded-full bg-green-500 px-2 py-0.5 text-[10px] font-semibold text-black">
+                          <span className="absolute -top-2 -right-2 rounded-full bg-[#9dae11] px-2 py-0.5 text-[10px] font-semibold text-[#FFFFF0]">
                             LIVE
                           </span>
                         </a>
@@ -786,7 +896,7 @@ export default function Home() {
 
                       <div
                         key={metricIndex}
-                        className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300 backdrop-blur-xl"
+                        className="rounded-xl border border-[#9dae11]/25 bg-[#FFFFF0]/10 px-4 py-2 text-sm text-[#FFFFF0] backdrop-blur-xl"
                       >
                         {metric}
                       </div>
@@ -800,9 +910,9 @@ export default function Home() {
                   {/* RIGHT IMAGE COLUMN */}
                   <div className="relative">
 
-                    <div className="absolute -inset-6 rounded-[2rem] bg-cyan-500/10 blur-3xl" />
+                    <div className="absolute -inset-6 rounded-[2rem] bg-[#9dae11]/10 blur-3xl" />
 
-                    <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/30 shadow-2xl">
+                    <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#1d5d1d]/30 shadow-2xl">
 
                       <img
                         src={project.cardImage}
@@ -810,7 +920,7 @@ export default function Home() {
                         className="w-full object-cover transition duration-700 group-hover:scale-[1.03]"
                       />
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#020817]/80 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#228B22]/85 via-transparent to-transparent" />
 
                       <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
 
@@ -837,7 +947,7 @@ export default function Home() {
       <section id="apps" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12">
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-400">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#9dae11]">
               Operational Apps
             </p>
             <h2 className="text-4xl font-bold">
@@ -850,9 +960,9 @@ export default function Home() {
               <div
                 key={app.title}
                 onClick={() => setSelectedApp(app)}
-                className="group cursor-pointer rounded-[2rem] border border-white/10 bg-white/5 p-4 backdrop-blur-xl transition hover:border-cyan-400/40"
+                className="group cursor-pointer rounded-[2rem] border border-[#9dae11]/25 bg-[#228B22] p-4 backdrop-blur-xl transition hover:border-[#9dae11]/90 text-white"
               >
-                <div className="relative mb-4 h-52 overflow-hidden rounded-2xl border border-white/10">
+                <div className="relative mb-4 h-52 overflow-hidden rounded-2xl border border-[#9dae11]/20">
 
                   <img
                     src={app.cardImage}
@@ -860,7 +970,7 @@ export default function Home() {
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#228B22]/35 via-transparent to-transparent" />
 
                 </div>
 
@@ -871,7 +981,7 @@ export default function Home() {
 
                 </div>
 
-                <p className="mt-3 text-gray-400">
+                <p className="mt-3 text-white">
                   {app.longDescription}
                 </p>
 
@@ -881,7 +991,7 @@ export default function Home() {
 
                   <span
                     key={index}
-                    className="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-300"
+                    className="rounded-full border border-[#9dae11]/30 bg-[#FFFFF0]/10 px-3 py-1 text-xs text-[#FFFFF0]"
                   >
                     {tool}
                   </span>
@@ -895,13 +1005,235 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ================= GOOGLE WORKSPACE ECOSYSTEM ================= */}
+
+      <section className="relative py-28">
+
+        <div className="mx-auto max-w-7xl px-6">
+
+          {/* Heading */}
+
+          <div className="mb-16 text-left">
+
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-[#9dae11]">
+              Enterprise Collaboration
+            </p>
+
+            <h2 className="text-4xl font-black text-[#228B22] md:text-6xl">
+              Google Workspace Ecosystem
+            </h2>
+
+          </div>
+
+          {/* Desktop */}
+
+          <div className="relative hidden h-[720px] rounded-[40px] border border-[#9dae11]/20 bg-[#228B22] lg:block">
+
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+
+            <Cpu
+              className="absolute right-[2%] top-[14%] h-38 w-38 text-[#FFFFF0]/25 animate-cpuGlow"
+              strokeWidth={1.2}
+            />
+
+            <Network
+              className="absolute right-[3%] bottom-[0%] h-40 w-40 text-[#FFFFF0]/5"
+              strokeWidth={1.2}
+            />
+
+            <Settings
+              className="absolute left-[11%] top-[8%] h-36 w-36 text-[#FFFFF0]/20 animate-gearSlow"
+              strokeWidth={1.2}
+            />
+
+            <Settings
+              className="absolute left-[4%] top-[4%] h-28 w-28 text-[#FFFFF0]/20 animate-gearReverse"
+              strokeWidth={1.2}
+            />
+
+            <Settings
+              className="absolute right-[10%] top-[30%] h-36 w-36 text-[#FFFFF0]/5 animate-gearMedium"
+              strokeWidth={1.2}
+            />
+
+            <Settings
+              className="absolute left-[1%] bottom-[0%] h-43 w-43 text-[#FFFFF0]/35 animate-gearReverse"
+              strokeWidth={1.2}
+            />
+          </div>
+
+
+            {/* CENTER */}
+
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+              <div className="rounded-3xl px-10 py-8 text-center">
+
+                <h2 className="bg-gradient-to-r from-[#FFFFF0] to-[#9dae11] bg-clip-text text-7xl font-black leading-none text-transparent">
+                  Google
+                </h2>
+
+                <h2 className="mt-2 bg-gradient-to-r from-[#FFFFF0] to-[#9dae11] bg-clip-text text-7xl font-black leading-none text-transparent">
+                  Workspace
+                </h2>
+
+              </div>
+
+            </div>
+
+            {/* TOP */}
+
+            {workspaceTools.slice(0,4).map((tool,index)=>{
+
+              const positions = [
+                "left-[13%] top-[28%]",   // Gmail (≈10 o'clock)
+                "left-[32%] top-[10%]",   // Chat (≈11:30)
+                "right-[29%] top-[10%]",  // Calendar (≈1:30)
+                "right-[10%] top-[30%]",  // Meet (≈2 o'clock)
+              ];
+
+              const Icon=tool.icon;
+
+              return(
+
+              <button
+
+              key={tool.title}
+
+              onClick={()=>setSelectedWorkspaceTool(tool)}
+
+              className={`absolute ${positions[index]} w-52 rounded-3xl border border-[#9dae11]/25 bg-[#FFFFF0]/10 p-5 backdrop-blur transition hover:scale-105 hover:border-[#9dae11]`}
+
+              >
+
+                <Icon className="mx-auto mb-4 h-10 w-10 text-[#9dae11]"/>
+
+                <h3 className="font-bold text-[#FFFFF0]">
+                  {tool.title}
+                </h3>
+
+                <p className="mt-2 text-sm text-[#FFFFF0]/70">
+                  {tool.short}
+                </p>
+
+              </button>
+
+              )
+
+            })}
+
+            {/* BOTTOM */}
+
+            {workspaceTools.slice(4).map((tool,index)=>{
+
+              const positions = [
+                "left-[6%] bottom-[25%]",                  // Drive
+                "left-[24%] bottom-[8%]",                   // Sheets ← move left
+                "left-[42%] bottom-[2%]",    // Apps Script ← lower
+                "right-[23%] bottom-[8%]",                  // Looker ← move right
+                "right-[5%] bottom-[25%]",                 // Gemini
+              ];
+              const Icon=tool.icon;
+
+              return(
+
+              <button
+
+              key={tool.title}
+
+              onClick={()=>setSelectedWorkspaceTool(tool)}
+
+              className={`absolute ${positions[index]} w-52 rounded-3xl border border-[#9dae11]/25 bg-[#FFFFF0]/10 p-5 backdrop-blur transition hover:scale-105 hover:border-[#9dae11]`}
+
+              >
+
+                <Icon className="mx-auto mb-4 h-10 w-10 text-[#9dae11]"/>
+
+                <h3 className="font-bold text-[#FFFFF0]">
+                  {tool.title}
+                </h3>
+
+                <p className="mt-2 text-sm text-[#FFFFF0]/70">
+                  {tool.short}
+                </p>
+
+              </button>
+
+              )
+
+            })}
+
+          </div>
+
+          {/* MOBILE */}
+
+          <div className="space-y-5 rounded-[32px] border border-[#9dae11]/20 bg-[#228B22] p-6 lg:hidden">
+
+            <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border-4 border-[#9dae11] bg-[#FFFFF0]">
+
+              <div className="text-center">
+
+                <h3 className="text-lg font-black text-[#228B22]">
+                  Google
+                </h3>
+
+                <p className="text-xs font-bold text-[#228B22]/70">
+                  Workspace
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+
+              {workspaceTools.map((tool)=>{
+
+                const Icon=tool.icon;
+
+                return(
+
+                <button
+
+                key={tool.title}
+
+                onClick={()=>setSelectedWorkspaceTool(tool)}
+
+                className="rounded-2xl border border-[#9dae11]/25 bg-[#FFFFF0]/10 p-4 text-left transition hover:border-[#9dae11]"
+
+                >
+
+                  <Icon className="mb-3 h-8 w-8 text-[#9dae11]"/>
+
+                  <h3 className="font-bold text-[#FFFFF0]">
+                    {tool.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-[#FFFFF0]/70">
+                    {tool.short}
+                  </p>
+
+                </button>
+
+                )
+
+              })}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
 
 
       {/* SERVICES */}
       <section id="services" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12">
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-400">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#9dae11]">
               Services
             </p>
             <h2 className="text-4xl font-bold">What I Build & Optimize</h2>
@@ -911,14 +1243,14 @@ export default function Home() {
             {services.map((service, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-cyan-400/40"
+              className="relative overflow-hidden rounded-3xl border border-[#9dae11]/25 bg-[#228B22] p-8 transition hover:border-[#9dae11]/50"
             >
               <div className="service-beam" />
             <div className="mb-5 flex items-start gap-4">
 
             <div className="mb-6 flex items-start gap-6">
 
-              <div className="flex h-12 w-16 shrink-0 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+              <div className="flex h-12 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#FFFFF0]/10 text-[#FFFFF0]">
                 <service.icon size={26} strokeWidth={2.2} />
               </div>
 
@@ -928,7 +1260,7 @@ export default function Home() {
                     key={idx}
                     className="group relative"
                   >
-                    <span className="inline-flex items-center rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-100 whitespace-nowrap">
+                    <span className="inline-flex items-center rounded-xl border border-[#9dae11]/40 bg-[#FFFFF0]/10 px-4 py-2 text-sm font-semibold text-[#FFFFF0] whitespace-nowrap">
                       {tool.name}
                     </span>
 
@@ -946,11 +1278,11 @@ export default function Home() {
             </div>
           </div>
 
-          <h3 className="text-xl font-semibold">
+          <h3 className="text-xl font-semibold text-[#FFFFF0]">
             {service.title}
           </h3>
 
-          <p className="mt-3 text-sm text-gray-400">
+          <p className="mt-3 text-sm text-white">
             {service.description}
           </p>
 
@@ -960,11 +1292,107 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="digital-platform" className="px-6 py-20">
+      <div className="mx-auto max-w-7xl">
+
+        <div className="mb-12">
+          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#9dae11]">
+            Featured Project
+          </p>
+
+          <h2 className="text-4xl font-bold">
+            Digital Customer Engagement Platform
+          </h2>
+        </div>
+
+        <div className="grid items-center gap-8 rounded-3xl border border-[#9dae11]/25 bg-[#228B22]/10 p-6 lg:grid-cols-10">
+
+          {/* WEBSITE PREVIEW */}
+
+          <div className="lg:col-span-7 overflow-hidden rounded-2xl border border-[#9dae11]/25">
+
+            <img
+              src={websiteImages[currentWebsiteImage]}
+              alt="Tulsi Guidance"
+              className="w-full rounded-2xl object-contain transition-all duration-700"
+            />
+
+          </div>
+
+          {/* DETAILS */}
+
+          <div className="lg:col-span-3">
+
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#9dae11]">
+              Business Solution
+            </p>
+
+            <div className="mt-2 flex items-center justify-between gap-3">
+              <h3 className="text-3xl font-bold text-[#228B22]">
+                Tulsi Guidance
+              </h3>
+
+              <a
+                href="https://www.tulsiguidance.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl text-[12px] border border-[#9dae11] bg-[#228B22] px-4 py-2 text-sm font-medium text-[#FFFFF0] transition hover:bg-[#1d771d]"
+              >
+                Visit Website ↗
+              </a>
+            </div>
+
+            <p className="mt-5 text-sm leading-7 text-gray-700">
+              Designed and developed a production ready digital customer engagement
+              platform featuring a unique UI tailored to the client's brand and
+              customer journey. Implemented an intelligent{" "}
+              <span className="font-semibold text-[#228B22]">
+                Request Callback
+              </span>{" "}
+              workflow to increase customer engagement, capture qualified enquiries,
+              and help scale business interactions. Built using a modular Next.js
+              architecture, reusable components, AI-assisted development and an
+              optimized deployment pipeline.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+
+              {[
+                "VS Code",
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Git",
+                "GitHub",
+                "Vercel",
+                "Hostinger DNS",
+                "Prompt Engineering",
+              ].map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-[#9dae11]/30 bg-[#9dae11]/10 px-3 py-1 text-xs font-medium text-[#228B22]"
+                >
+                  {tool}
+                </span>
+              ))}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+      
+
       <section id="videos" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
 
           <div className="mb-12">
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-400">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#9dae11]">
               Project Showcase
             </p>
 
@@ -976,7 +1404,7 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-12">
 
             {/* DEMO VIDEOS */}
-            <div className="lg:col-span-6 rounded-3xl border border-white/10 bg-white/5 p-2">
+            <div className="lg:col-span-6 rounded-3xl border border-[#9dae11]/25 bg-[#228B22]/20 p-2">
 
               <video
                 key={showcaseIndex}
@@ -999,7 +1427,7 @@ export default function Home() {
             </div>
 
             {/* REELS */}
-            <div className="lg:col-span-3 rounded-3xl border border-white/10 bg-white/5 p-2">
+            <div className="lg:col-span-3 rounded-3xl border border-[#9dae11]/25 bg-[#228B22]/20 p-2">
 
               <video
                 key={reelsIndex}
@@ -1023,7 +1451,7 @@ export default function Home() {
             </div>
 
             {/* SNAPSHOTS */}
-            <div className="lg:col-span-3 rounded-3xl border border-white/10 bg-white/5 p-2">
+            <div className="lg:col-span-3 rounded-3xl border border-[#9dae11]/25 bg-[#228B22]/20 p-2">
 
               <div className="h-[420px] overflow-hidden rounded-2xl">
                 <img
@@ -1041,12 +1469,12 @@ export default function Home() {
       </section>
       {/* CONTACT */}
       <section id="contact" className="px-6 py-24">
-        <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-500/15 via-[#07111f] to-violet-500/15 shadow-[0_0_120px_rgba(34,211,238,0.08)] p-12 relative z-10 text-center backdrop-blur-lg">
+        <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#9dae11]/25 bg-gradient-to-br from-[#228B22] via-[#1d5d1d] to-[#9dae11] shadow-[0_0_120px_rgba(157,174,17,0.15)] p-12 relative z-10 text-center backdrop-blur-lg">
           <h2 className="text-4xl md:text-5xl font-black text-white">
             Let's Build Intelligent Systems
           </h2>
 
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-300">
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-[#FFFFF0]">
             Open to automation projects, workflow optimization systems,
             analytics dashboards and operational tooling collaborations.
           </p>
@@ -1054,7 +1482,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <button 
             onClick={() => setShowContactModal(true)}
-            className="rounded-xl bg-cyan-500 px-8 py-4 font-medium transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,211,238,0.35)]">
+            className="rounded-xl bg-[#9dae11] px-8 py-4 font-medium transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(157,174,17,0.35)] text-[#FFFFF0]">
               Contact
             </button>
 
@@ -1067,12 +1495,12 @@ export default function Home() {
 
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6 backdrop-blur-md">
 
-          <div className="relative max-h-[90vh] w-full max-w-7xl overflow-y-auto rounded-3xl border border-cyan-400/20 bg-[#07111f] p-5 md:p-10 shadow-2xl">
+          <div className="relative max-h-[90vh] w-full max-w-7xl overflow-y-auto rounded-3xl border border-[#9dae11]/25 bg-[#228B22] p-5 md:p-10 shadow-2xl">
 
             {/* CLOSE BUTTON */}
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute right-5 top-5 z-[999] flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-black/80 text-3xl font-light text-white backdrop-blur-xl transition hover:scale-110 hover:border-cyan-400/40 hover:text-cyan-300"
+              className="absolute right-5 top-5 z-[999] flex h-12 w-12 items-center justify-center rounded-full border border-[#9dae11]/25 bg-[#1d5d1d]/90 text-3xl font-light text-white backdrop-blur-xl transition hover:scale-110 hover:border-[#9dae11]/50 hover:text-[#9dae11]"
             >
               ×
             </button>
@@ -1080,7 +1508,7 @@ export default function Home() {
             {/* HEADER */}
             <div className="mb-8">
 
-              <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm md:px-6 md:py-3 md:text-lg font-medium text-cyan-300 backdrop-blur-xl">
+              <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#9dae11]/30 bg-[#FFFFF0]/10 px-4 py-2 text-sm md:px-6 md:py-3 md:text-lg font-medium text-[#FFFFF0] backdrop-blur-xl">
 
                 <img
                   src={selectedProject.icon}
@@ -1096,7 +1524,7 @@ export default function Home() {
                 {selectedProject.title}
               </h2>
 
-              <p className="mt-4 max-w-3xl text-lg leading-relaxed text-gray-400">
+              <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[#fffff0]">
                 {selectedProject.longDescription}
               </p>
 
@@ -1123,12 +1551,12 @@ export default function Home() {
 
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6 backdrop-blur-md">
 
-          <div className="relative max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-cyan-400/20 bg-[#07111f] p-5 md:p-10">
+          <div className="relative max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-[#9dae11]/25 bg-[#228B22]/50 p-5 md:p-10">
 
             {/* CLOSE */}
             <button
               onClick={() => setSelectedApp(null)}
-              className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-black/80 text-3xl text-white"
+              className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full border border-[#9dae11]/25 bg-[#1d5d1d]/90 text-3xl text-white"
             >
               ×
             </button>
@@ -1137,7 +1565,7 @@ export default function Home() {
               {selectedApp.title}
             </h2>
 
-            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-gray-400">
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[#fffff0]">
               {selectedApp.modalDescription}
             </p>
 
@@ -1182,12 +1610,12 @@ export default function Home() {
       {showContactModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-md">
 
-          <div className="relative max-h-[90vh] overflow-y-auto w-[95vw] max-w-6xl rounded-[2.5rem] border border-cyan-500/20 bg-[#07111f] p-5 md:p-14">
+          <div className="relative max-h-[90vh] overflow-y-auto w-[95vw] max-w-6xl rounded-[2.5rem] border border-[#9dae11]/25 bg-[#228B22] p-5 md:p-14">
 
             {/* CLOSE */}
             <button
               onClick={() => setShowContactModal(false)}
-              className="absolute right-6 top-6 text-6xl font-bold text-slate-400 transition hover:scale-110 hover:text-white"
+              className="absolute right-6 top-6 text-6xl font-bold text-[#FFFFF0]/70 transition hover:scale-110 hover:text-[#9dae11]"
             >
               ×
             </button>
@@ -1196,7 +1624,7 @@ export default function Home() {
             Let's Connect
             </h2>
 
-            <p className="mt-5 text-base md:text-2xl text-slate-400">
+            <p className="mt-5 text-base md:text-2xl text-[#fffff0]">
               Open to automation, analytics, operational systems and AI workflow collaborations.
             </p>
 
@@ -1205,9 +1633,9 @@ export default function Home() {
               {/* EMAIL */}
               <a
                 href="mailto:shubhkanchan21@gmail.com"
-                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
+                className="rounded-2xl border border-[#9dae11]/30 bg-[#FFFFF0]/10 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
-                <p className="mb-6 text-3xl font-bold text-cyan-400">
+                <p className="mb-6 text-3xl font-bold text-[#FFFFF0]">
                   <span className="inline-block animate-bounce">
                     📩
                   </span>{" "}
@@ -1224,7 +1652,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/shubh-om-kanchan-baa778212/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
+                className="rounded-2xl border border-[#9dae11]/30 bg-[#FFFFF0]/10 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
                 <p className="text-2xl md:text-2xl md:text-4xl font-black text-white">
                   <span className="inline-block animate-bounce">
@@ -1234,7 +1662,7 @@ export default function Home() {
                 </p>
 
                 <div className="flex h-full items-center">
-                  <h3 className="break-all text-base md:text-3xl font-bold text-white">
+                  <h3 className="break-all text-base md:text-3xl font-bold text-white" style={{paddingBottom:"35px"}}>
                     Connect Professionally
                   </h3>
                 </div>
@@ -1243,9 +1671,9 @@ export default function Home() {
               {/* PHONE */}
               <a
                 href="tel:+919004566888"
-                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
+                className="rounded-2xl border border-[#9dae11]/30 bg-[#FFFFF0]/10 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
-                <p className="mb-6 text-3xl font-bold text-cyan-400">
+                <p className="mb-6 text-3xl font-bold text-[#FFFFF0]">
                   <span className="inline-block animate-ring">
                     📞
                   </span>{" "}
@@ -1263,9 +1691,9 @@ export default function Home() {
                   setShowContactModal(false);
                   setShowResume(true);
                 }}
-                className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
+                className="rounded-2xl border border-[#9dae11]/30 bg-[#FFFFF0]/10 p-5 md:p-8 min-h-[120px] md:min-h-[180px]"
               >
-                <p className="text-left mb-6 text-3xl font-bold text-cyan-400">
+                <p className="text-left mb-6 text-3xl font-bold text-[#FFFFF0]">
                   <span className="inline-block animate-pulse">
                     📑
                   </span>{" "}
