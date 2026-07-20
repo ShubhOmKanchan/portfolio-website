@@ -1336,7 +1336,7 @@ export default function Home() {
                 href="https://www.tulsiguidance.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl text-[12px] border border-[#9dae11] bg-[#228B22] px-4 py-2 text-sm font-medium text-[#FFFFF0] transition hover:bg-[#1d771d]"
+                className="rounded-xl lg:text-[10px] border border-[#9dae11] bg-[#228B22] px-4 py-2 text-sm font-medium text-[#FFFFF0] transition hover:bg-[#1d771d]"
               >
                 Visit Website ↗
               </a>
